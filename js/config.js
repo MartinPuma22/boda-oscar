@@ -6,6 +6,7 @@ const BODA = {
   novia: "Nadia",
   novio: "Óscar",
   titulo: "¡Nos vamos a casar!",
+  sobre: { titulo: "¡Nos vamos a casar!", texto: "Da click en el sello para abrir" },
   frase: "El amor es el significado último de todo lo que nos rodea. No es un simple sentimiento, es la verdad, es la alegría que está en el origen de toda creación.",
 
   // Fecha de la cuenta regresiva (año-mes-díaTHH:MM:SS, hora local)
@@ -22,7 +23,7 @@ const BODA = {
     horarios: [["Ingreso al local", "13:00 pm"], ["Matrimonio Civil", "14:00 pm"], ["Inicio de recepción", "15:15 pm"]],
     lugar: "VILLA ROMANA / Salón de Recepciones",
     nota: "Te agradecemos mucho llegar puntual.",
-    mapa: "https://maps.google.com/?q=Villa+Romana+Lima"   // enlace del botón VER MAPA
+    mapa: "https://www.google.com/maps?q=-12.153916358947754,-76.87957763671875&z=17&hl=es"   // enlace del botón VER MAPA
   },
   referencias: ["Jockey Plaza", "Universidad Agraria La Molina", "Universidad UCAL", "Curva de Manchay", "Paradero Tres Marías", "Portada San Judas", "Lugar de recepción"],
 
@@ -30,8 +31,8 @@ const BODA = {
 
   confirmacion: {
     texto: "Eres muy importante para nosotros por favor confirma tu asistencia hasta el 03 de Noviembre.",
-    whatsapp: "51999999999",   // tu número con código de país, sin +
-    mensaje: "Hola, confirmo mi asistencia a la boda de Nadia y Óscar."
+    whatsapp: "51967241805",   // tu número con código de país, sin +
+    mensaje: "¡Hola! Quiero confirmar mi asistencia a su boda. Será un placer acompañarlos en este día tan especial. (Coloco mi nombre completo y de mi acompañante)"
   },
   regalos: "Su presencia en nuestra boda será el regalo más hermoso. Pero si insistes en tener un detallito, aceptamos \"Lluvia de Sobres\" en la celebración.",
   cierre: "Con mucha ilusión queremos vivir este momento rodeados de personas que han formado parte de nuestra historia. Será un honor contar con su presencia.",
@@ -46,6 +47,7 @@ const BODA = {
     foto1: "assets/img/fotos/foto-1.jpg",
     foto2: "assets/img/fotos/foto-2.jpg",
     foto3: "assets/img/fotos/foto-3.jpg",
+    fotoSobre: "assets/img/fotos/foto-sobre.jpg",
     flores: "assets/img/decoracion/flores.png",
     sello: "assets/img/logos/sello.png",
     vestimenta: "assets/img/decoracion/vestimenta.png",

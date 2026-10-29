@@ -12,7 +12,10 @@ const ico = {
 };
 const wa = `https://wa.me/${B.confirmacion.whatsapp}?text=${encodeURIComponent(B.confirmacion.mensaje)}`;
 
-$("#sobre-nombres").textContent = `${B.novia} & ${B.novio}`;
+$("#sobre-titulo").textContent = B.sobre.titulo;
+$("#sobre-texto").textContent = B.sobre.texto;
+$("#sobre-foto").src = I.fotoSobre;
+$("#sobre-sello").src = I.sello;
 
 $("#app").innerHTML = `
 <section class="hero">
@@ -121,7 +124,7 @@ $("#bow").addEventListener("click", () => {
     const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.2 });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     petalos();
-  }, 2800);
+  }, 4800);
 });
 
 /* ---------- Pétalos (caída lenta: 16 a 26 segundos) ---------- */
