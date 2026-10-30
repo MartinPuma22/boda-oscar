@@ -3,8 +3,10 @@ const $ = (s) => document.querySelector(s);
 const img = (src, alt = "", cls = "") => `<img class="${cls}" src="${src}" alt="${alt}" loading="lazy" onerror="this.style.visibility='hidden'">`;
 const flor = (pos) => img(I.flores, "", `flor ${pos}`);
 const lista = (a) => a.map((x) => `<p>${x}</p>`).join("");
-const orn = `<div class="orn reveal"><svg viewBox="0 0 300 24" fill="none" stroke="#b7cabb" stroke-width="1.2"><path d="M0 12h118M182 12h118"/><path d="M150 20c-15-9-15-19-7-19 3 0 6 2 7 5 1-3 4-5 7-5 8 0 8 10-7 19z"/></svg></div>`;
-const ico = {
+const corazon = (x) => `<path transform="translate(${x} 26) scale(.55) translate(-150 -10.5)" d="M150 20c-15-9-15-19-7-19 3 0 6 2 7 5 1-3 4-5 7-5 8 0 8 10-7 19z" fill="#d3ded6" stroke="none"/>`;
+const ladoOnda = `<path d="M38 26C50 14 64 38 78 26S106 14 120 26S142 36 160 32"/>`;
+const lazo = `<path d="M160 32C176 20 188 6 174 4C168 3 162 8 160 14C158 8 152 3 146 4C132 6 144 20 160 32"/>`;
+const orn = `<div class="orn reveal"><svg viewBox="0 0 320 40" fill="none" stroke="#c9d7cd" stroke-width="1.4" stroke-linecap="round">${corazon(30)}${corazon(290)}${ladoOnda}<g transform="matrix(-1 0 0 1 320 0)">${ladoOnda}</g>${lazo}</svg></div>`;const ico = {
   play: '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',
   pause: '<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>',
   prev: '<svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM9 12l10 7V5z"/></svg>',
