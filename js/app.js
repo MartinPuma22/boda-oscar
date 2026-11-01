@@ -6,7 +6,32 @@ const lista = (a) => a.map((x) => `<p>${x}</p>`).join("");
 const corazon = (x) => `<path transform="translate(${x} 26) scale(.55) translate(-150 -10.5)" d="M150 20c-15-9-15-19-7-19 3 0 6 2 7 5 1-3 4-5 7-5 8 0 8 10-7 19z" fill="#d3ded6" stroke="none"/>`;
 const ladoOnda = `<path d="M38 26C50 14 64 38 78 26S106 14 120 26S142 36 160 32"/>`;
 const lazo = `<path d="M160 32C176 20 188 6 174 4C168 3 162 8 160 14C158 8 152 3 146 4C132 6 144 20 160 32"/>`;
-const orn = `<div class="orn reveal"><svg viewBox="0 0 320 40" fill="none" stroke="#c9d7cd" stroke-width="1.4" stroke-linecap="round">${corazon(30)}${corazon(290)}${ladoOnda}<g transform="matrix(-1 0 0 1 320 0)">${ladoOnda}</g>${lazo}</svg></div>`;const ico = {
+/* ---------- Siluetas dibujadas con código ---------- */
+const corazonLinea = (x, y, s = 1) => `<path transform="translate(${x} ${y}) scale(${s})" d="M0 5C-9 -1 -5 -9 0 -4C5 -9 9 -1 0 5z"/>`;
+/* ---------- Siluetas de personas (rellenas) ---------- */
+const FIG = "#8ea396", OSC = "#6f8579", DET = "#fffdf4";
+const mitad = (d) => `<path d="${d}"/><path d="${d}" transform="matrix(-1 0 0 1 100 0)"/>`;
+const hombre = (x) => `<g transform="translate(${x - 50} 0)" fill="${FIG}">
+<ellipse cx="50" cy="15" rx="8" ry="10"/><path d="M41.5 13C41 3 59 3 58.5 13C55 8 45 8 41.5 13Z" fill="${OSC}"/>
+<path d="M45.5 23H54.5L55 32H45Z"/>
+${mitad("M50 31H55C62 33 70 34 74 38C77 42 77 50 77 58L74 94L72 104H50Z")}
+${mitad("M50 104H69C69 130 68 160 66.5 190H56C54 160 52 140 50 120Z")}
+${mitad("M55 189H67C72 190 75 193 75 197H55Z")}
+<ellipse cx="71" cy="109" rx="3" ry="5"/><ellipse cx="29" cy="109" rx="3" ry="5"/>
+<path d="M45 31L50 62L55 31Z" fill="${DET}"/><path d="M50 35L48.2 56L50 64L51.8 56Z" fill="${OSC}"/>
+<g fill="none" stroke="${DET}" stroke-width="1.1" stroke-linecap="round"><path d="M45 31L38 52L50 70L62 52L55 31"/><path d="M67 56C68 74 67 90 66 103M33 56C32 74 33 90 34 103"/></g></g>`;
+const mujer = (x, velo) => `<g transform="translate(${x - 50} 0)" fill="${FIG}">
+${velo ? `<g opacity=".35">${mitad("M50 5C66 10 72 40 74 98C72 102 66 102 64 98C64 60 60 30 50 22Z")}</g>` : ""}
+<ellipse cx="50" cy="16" rx="7.2" ry="9.3"/><path d="M42.5 15C42 6 58 6 57.5 15C55 10 45 10 42.5 15Z" fill="${OSC}"/><circle cx="50" cy="6" r="4.5" fill="${OSC}"/>
+<path d="M46.5 25H53.5L54 32H46Z"/>
+${mitad("M50 31H54C59 33 64 34 66 38C68 42 68 48 67 56C66 66 65 74 64 84L63 90L60 88C60 80 59 70 59 52C58 60 57 70 57 78C58 82 72 150 88 190C72 194 60 194 50 193Z")}
+<g fill="none" stroke="${DET}" stroke-width="1.1" stroke-linecap="round"><path d="M43 36C47 45 53 45 57 36"/><path d="M43 79Q50 82 57 79"/><path d="M50 90C49 130 46 160 40 192M50 90C51 130 54 160 60 192" stroke-opacity=".5"/></g>
+<g fill="#b7cabb" stroke="${DET}" stroke-width="1"><circle cx="50" cy="86" r="4.5"/><circle cx="45" cy="90" r="3.8"/><circle cx="55" cy="90" r="3.8"/><circle cx="50" cy="93" r="3.8"/></g></g>`;
+const svgPareja = `<svg class="ico ico-pareja reveal" viewBox="0 0 170 205">${hombre(45)}${mujer(125, true)}<g fill="none" stroke="#b7cabb" stroke-width="1.2">${corazonLinea(85, 22)}${corazonLinea(99, 14, 0.8)}${corazonLinea(73, 14, 0.7)}</g></svg>`;
+const svgVestimenta = `<svg class="ico ico-vestir reveal" viewBox="0 0 150 205">${hombre(38)}${mujer(112, false)}</svg>`;
+const trazo = 'fill="none" stroke="#7f9186" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"';
+const svgLibro = `<svg class="ico ico-libro" viewBox="0 0 100 70"><path d="M50 14C38 8 22 8 8 12V58C22 54 38 54 50 60Z" fill="#bccfc1"/><path d="M50 14C62 8 78 8 92 12V58C78 54 62 54 50 60Z" fill="#c9d8cd"/><path d="M16 22C26 20 38 22 44 26M16 30C26 28 38 30 44 34M16 38C26 36 38 38 44 42M84 22C74 20 62 22 56 26M84 30C74 28 62 30 56 34M84 38C74 36 62 38 56 42" fill="none" stroke="#fffdf4" stroke-width="1.2" stroke-linecap="round"/><g fill="none" stroke="#b7cabb" stroke-width="1.2">${corazonLinea(50, 6, 1.1)}</g></svg>`;
+const svgCofre = `<svg class="ico ico-cofre reveal" viewBox="0 0 100 80" fill="none" stroke="#b7cabb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 34V26C12 12 28 8 50 8C72 8 88 12 88 26V34Z"/><rect x="12" y="34" width="76" height="38" rx="2"/><path d="M26 11V72M74 11V72"/><path d="M12 46H88M12 58H88"/><rect x="41" y="27" width="18" height="15" rx="3" fill="#fffdf4"/><circle cx="50" cy="33.5" r="2.2"/><path d="M50 35.7V39"/></svg>`;const orn = `<div class="orn reveal"><svg viewBox="0 0 320 40" fill="none" stroke="#c9d7cd" stroke-width="1.4" stroke-linecap="round">${corazon(30)}${corazon(290)}${ladoOnda}<g transform="matrix(-1 0 0 1 320 0)">${ladoOnda}</g>${lazo}</svg></div>`;const ico = {
   play: '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',
   pause: '<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>',
   prev: '<svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM9 12l10 7V5z"/></svg>',
@@ -62,7 +87,7 @@ ${orn}
 <section class="blk"><div class="torn alta ambos reveal">${img(I.foto2)}</div>${flor("bl")}</section>
 
 <section class="pad"><div class="card reveal">
-  <h3 class="script">Ceremonia</h3>
+  <h3 class="script">Ceremonia</h3>${svgPareja}
   <table>${B.ceremonia.horarios.map(([a, b]) => `<tr><td>${a}:</td><td>${b}</td></tr>`).join("")}</table>
   <p>${B.ceremonia.lugar}</p><p class="mini">${B.ceremonia.nota}</p>
   <a class="btn" href="${B.ceremonia.mapa}" target="_blank" rel="noopener">VER MAPA</a>
@@ -71,7 +96,7 @@ ${orn}
 ${orn}
 <section class="center pad">
   <h3 class="script reveal grande">Código de vestimenta</h3>
-  ${img(I.vestimenta, "", "ico reveal")}
+  ${svgVestimenta}
   <p class="cod reveal">${B.vestimenta.codigo}</p>
   <p class="reveal">Hombres: ${B.vestimenta.hombres}<br>Mujeres : ${B.vestimenta.mujeres}</p>
 </section>
@@ -79,13 +104,13 @@ ${orn}
 <section class="blk"><div class="torn alta ambos reveal">${img(I.foto3)}</div>${flor("bl")}</section>
 
 <section class="pad"><div class="card reveal">
-  <h3 class="script">Confirmación de asistencia</h3>${img(I.libro, "", "ico")}
+  <h3 class="script">Confirmación de asistencia</h3>${svgLibro}
   <p>${B.confirmacion.texto}</p>
   <a class="btn solid" href="${wa}" target="_blank" rel="noopener">CONFIRMAR ASISTENCIA</a>
 </div></section>
 
 <section class="center pad">
-  <h3 class="script reveal grande">Regalos</h3><p class="reveal d1">${B.regalos}</p>
+  ${svgCofre}<h3 class="script reveal grande">Regalos</h3><p class="reveal d1">${B.regalos}</p>
   ${orn}
   <div class="galeria">${B.galeria.map((g, i) => `<figure class="reveal d${i % 3}" style="--r:${i % 2 ? 2 : -2}deg">${img(g.foto, g.titulo)}<figcaption class="script">${g.titulo}</figcaption></figure>`).join("")}</div>
 </section>

@@ -4,7 +4,7 @@
    ===================================================== */
 const BODA = {
   novia: "Nadia",
-  novio: "Óscar",
+  novio: "Oscar",
   titulo: "¡Nos vamos a casar!",
   sobre: { titulo: "¡Nos vamos a casar!", texto: "Da click en el sello para abrir" },
   frase: "El amor es el significado último de todo lo que nos rodea. No es un simple sentimiento, es la verdad, es la alegría que está en el origen de toda creación.",
@@ -15,7 +15,7 @@ const BODA = {
   bendicion: "Con la bendición de Dios y de nuestros padres.",
 
   padresNovia: ["Roldan Rime Pumayauli", "Egna Ramírez Fernández"],
-  padresNovio: ["Oscar Benjamín Andrade Valverde", "Mercy Bocanegra Villanueva"],
+  padresNovio: ["Oscar Benjamin Andrade Valverde", "Mercy Bocanegra Villanueva"],
   padrinos: ["Luis Alberto Osorio Ramirez", "Zoila Luz Revelli Valverde"],
   testigos: ["Manuel Pedro Soto Torres", "Ana Cristina Maucaylle Prado"],
 
@@ -34,7 +34,7 @@ const BODA = {
     whatsapp: "51967241805",   // tu número con código de país, sin +
     mensaje: "¡Hola! Quiero confirmar mi asistencia a su boda. Será un placer acompañarlos en este día tan especial. (Coloco mi nombre completo y de mi acompañante)"
   },
-  regalos: "Su presencia en nuestra boda será el regalo más hermoso. Pero si insistes en tener un detallito, aceptamos \"Lluvia de Sobres\" en la celebración.",
+  regalos: "Su presencia en nuestra boda será el regalo más hermoso. Pero si insistes en tener un detallito, aceptamos \"Lluvia de Sobres\" en la celebración. También tendremos un lugar especial para los obsequios.",
   cierre: "Con mucha ilusión queremos vivir este momento rodeados de personas que han formado parte de nuestra historia. Será un honor contar con su presencia.",
   despedida: "¡Te esperamos!",
 

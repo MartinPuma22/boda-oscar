@@ -48,7 +48,7 @@ p{margin:.25rem 0}
 .torn img{width:100%;height:100%;object-fit:cover;display:block}
 .flor{position:absolute;width:46%;pointer-events:none;z-index:3}
 .flor.bl{left:-4%;bottom:-3%}.flor.tl{left:-9%;top:-14%;width:40%}.flor.br{right:-9%;bottom:-14%;width:40%;transform:scaleX(-1)}
-.hero .flor.bl{left:-3%;bottom:-11%;width:44%}
+.hero .flor.bl{left:-7%;bottom:-11%;width:60%;transform:scaleX(-1);transform:rotate(174deg)}
 .sello .flor{position:static;width:30%;display:inline-block}.flip{transform:scaleX(-1)}
 .hero .pad{margin-top:-2rem;position:relative;z-index:4;text-align:center}
 .nombres{font-size:clamp(3.4rem,15vw,4.6rem);color:var(--texto);margin:.1rem 0}
@@ -114,3 +114,11 @@ p{margin:.25rem 0}
 .banda{margin:.8rem 0 1rem}           /* banda verde más cerca del reproductor */
 .card:last-child{margin-bottom:0}     /* la última tarjeta de cada bloque no suma espacio extra */
 .pad + .pad{padding-top:0}            /* bloques seguidos: no duplicar el espacio (Regalos, cierre) */
+
+/* ===== SILUETAS ===== */
+.ico{width:100%}
+.ico-pareja{max-width:130px}
+.ico-vestir{max-width:120px}
+.ico-libro{max-width:90px}
+.ico-cofre{max-width:90px}
+
